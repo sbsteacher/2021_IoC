@@ -1,21 +1,9 @@
 package com.koreait.spring.basic;
 
-public class SamsungTv {
-    private Speaker speaker;
-
+public class SamsungTv extends Tv {
     public SamsungTv() {
+        super(new AppleSpeaker()); //HamanSpeaker로 바꾸고 싶다면 소스 수정을 해야 한다.
         System.out.println(" -- SamsungTv Created -- ");
-        speaker = new AppleSpeaker();
-    }
 
-    public void volumeUp() {
-        //소리크기 : ?
-        speaker.speakUp();
-        System.out.printf("소리크기 : %d\n", speaker.getVolume());
-    }
-
-    public void volumeDown() {
-        speaker.speakDown();
-        System.out.printf("소리크기 : %d\n", speaker.getVolume());
     }
 }

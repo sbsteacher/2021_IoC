@@ -1,21 +1,9 @@
 package com.koreait.spring.basic;
 
-public class LgTv {
-    private Speaker speaker; //결국 소스를 수정을 해야 한다.
+public class LgTv extends Tv {
 
     public LgTv() {
+        super(new AppleSpeaker());
         System.out.println(" -- LgTv Created -- ");
-        speaker = new AppleSpeaker();
-    }
-
-    public void volumeUp() {
-        //소리크기 : ?
-        speaker.speakUp();
-        System.out.printf("소리크기 : %d\n", speaker.getVolume());
-    }
-
-    public void volumeDown() {
-        speaker.speakDown();
-        System.out.printf("소리크기 : %d\n", speaker.getVolume());
     }
 }
