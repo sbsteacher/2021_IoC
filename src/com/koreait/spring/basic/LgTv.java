@@ -1,11 +1,11 @@
 package com.koreait.spring.basic;
 
 public class LgTv {
-    private HamanSpeaker speaker; //결국 소스를 수정을 해야 한다.
+    private Speaker speaker; //결국 소스를 수정을 해야 한다.
 
     public LgTv() {
         System.out.println(" -- LgTv Created -- ");
-        speaker = new HamanSpeaker();
+        speaker = new AppleSpeaker();
     }
 
     public void volumeUp() {
